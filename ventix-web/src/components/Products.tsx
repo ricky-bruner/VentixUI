@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import Image from "next/image";
+import { basePath } from "@/lib/basePath";
 
 const vNexa = [
   { model: "V-Nexa 20", size: "Small", description: "Standard airflow, energy-efficient" },
@@ -100,11 +100,9 @@ export default function Products() {
           >
             <div className="absolute inset-0 bg-[#5b5fc7] opacity-5 blur-3xl rounded-full" />
             <div className="card-surface rounded-3xl p-8 flex items-center justify-center min-h-[400px]">
-              <Image
-                src={activeTab === "V" ? "/images/v-nexa.png" : "/images/h-nexa.png"}
+              <img
+                src={activeTab === "V" ? `${basePath}/images/v-nexa.png` : `${basePath}/images/h-nexa.png`}
                 alt={activeTab === "V" ? "V-Nexa Vertical Unit" : "H-Nexa Horizontal Unit"}
-                width={320}
-                height={460}
                 className="w-auto max-h-[400px] drop-shadow-2xl transition-all duration-300"
               />
             </div>

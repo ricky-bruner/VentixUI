@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { basePath } from "@/lib/basePath";
 
 export default function Hero() {
   return (
@@ -75,13 +75,10 @@ export default function Hero() {
         <div className="relative">
           {/* Soft glow under unit */}
           <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-48 h-12 bg-[#5b5fc7] opacity-25 blur-2xl rounded-full" />
-          <Image
-            src="/images/v-nexa.png"
+          <img
+            src={`${basePath}/images/v-nexa.png`}
             alt="Ventix Nexa V-Series Unit"
-            width={360}
-            height={520}
             className="w-full h-auto drop-shadow-2xl"
-            priority
           />
         </div>
       </motion.div>
