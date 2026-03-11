@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy-950: #04091a;
+  --color-navy-900: #070d1f;
+  --color-navy-800: #0d1535;
+  --color-navy-700: #111d45;
+  --color-accent: #5b5fc7;
+  --color-accent-hover: #6e72d4;
+  --color-accent-glow: rgba(91, 95, 199, 0.3);
+  --color-text-muted: #a8b3d4;
+  --color-text-dim: #6b7ba4;
+  --color-border: rgba(168, 179, 212, 0.12);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #070d1f;
+  color: #ffffff;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Diagonal line texture overlay */
+.bg-texture {
+  background-image: repeating-linear-gradient(
+    -55deg,
+    transparent,
+    transparent 60px,
+    rgba(255, 255, 255, 0.015) 60px,
+    rgba(255, 255, 255, 0.015) 61px
+  );
+}
+
+/* Display heading gradient */
+.heading-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #8b93c4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pill nav backdrop */
+.nav-pill {
+  background: rgba(13, 21, 53, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 179, 212, 0.15);
+}
+
+/* Card surface */
+.card-surface {
+  background: rgba(13, 21, 53, 0.6);
+  border: 1px solid rgba(168, 179, 212, 0.12);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #070d1f;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2a5e;
+  border-radius: 3px;
+}
